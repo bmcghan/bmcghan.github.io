@@ -1,10 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hello World</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RedBeard51 - A personal development lab focused on building clean, minimalist tools.">
+    <title>RedBeard51 | Development Lab</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>My first GitHub Pages site.</p>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 18C12 18 14 16 20 16C26 16 28 18 28 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M10 22C10 22 12 20 20 20C28 20 30 22 30 22L28 28C28 28 26 32 20 32C14 32 12 28 12 28L10 22Z" fill="#8B2500"/>
+                    <path d="M14 24C14 24 16 23 20 23C24 23 26 24 26 24" stroke="#5C1A00" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M15 27C15 27 17 26 20 26C23 26 25 27 25 27" stroke="#5C1A00" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="14" cy="14" r="2" fill="currentColor"/>
+                    <circle cx="26" cy="14" r="2" fill="currentColor"/>
+                </svg>
+                RedBeard51
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <svg class="hero-logo" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="54" stroke="#8B2500" stroke-width="4"/>
+                <path d="M30 52C30 52 38 46 60 46C82 46 90 52 90 52" stroke="#8B2500" stroke-width="4" stroke-linecap="round"/>
+                <path d="M24 62C24 62 32 56 60 56C88 56 96 62 96 62L90 82C90 82 84 96 60 96C36 96 30 82 30 82L24 62Z" fill="#8B2500"/>
+                <path d="M36 70C36 70 44 66 60 66C76 66 84 70 84 70" stroke="#5C1A00" stroke-width="3" stroke-linecap="round"/>
+                <path d="M40 80C40 80 48 76 60 76C72 76 80 80 80 80" stroke="#5C1A00" stroke-width="3" stroke-linecap="round"/>
+                <path d="M44 88C44 88 50 86 60 86C70 86 76 88 76 88" stroke="#5C1A00" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="40" cy="38" r="6" fill="#8B2500"/>
+                <circle cx="80" cy="38" r="6" fill="#8B2500"/>
+                <circle cx="40" cy="38" r="2" fill="#2D2D2D"/>
+                <circle cx="80" cy="38" r="2" fill="#2D2D2D"/>
+            </svg>
+            <h1>RedBeard51</h1>
+            <p class="tagline">Personal Development Lab</p>
+            <p>Building clean, minimalist tools that do one thing well. No bloat, no unnecessary complexity—just focused solutions for everyday development needs.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#tools" class="btn btn-primary">Explore Tools</a>
+                <a href="about.html" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Philosophy</h2>
+                <p>Every tool should earn its place. If it doesn't solve a real problem simply, it doesn't ship.</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4L44 14V34L24 44L4 34V14L24 4Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M24 24L44 14M24 24L4 14M24 24V44" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <h3>Minimal by Design</h3>
+                    <p>Every feature must justify its existence. Less code means fewer bugs and easier maintenance.</p>
+                </div>
+                <div class="tool-card">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M24 14V24L32 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h3>Built to Last</h3>
+                    <p>Stable, well-tested tools that you can depend on. No chasing trends—just solid engineering.</p>
+                </div>
+                <div class="tool-card">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="6" width="36" height="36" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M16 24L22 30L32 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Does One Thing Well</h3>
+                    <p>Focused tools that excel at their purpose. Composable, not monolithic.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tools</h2>
+                <p>A growing collection of developer utilities. Each one crafted with care.</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="10" width="36" height="28" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M14 22L20 28L14 34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M26 34H34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h3>CLI Utilities</h3>
+                    <p>Command-line tools that streamline your development workflow.</p>
+                    <span class="coming-soon">Coming Soon</span>
+                </div>
+                <div class="tool-card">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 12H40V36H8V12Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M8 20H40" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="14" cy="16" r="2" fill="currentColor"/>
+                        <circle cx="20" cy="16" r="2" fill="currentColor"/>
+                        <circle cx="26" cy="16" r="2" fill="currentColor"/>
+                    </svg>
+                    <h3>Web Components</h3>
+                    <p>Lightweight, framework-agnostic UI components.</p>
+                    <span class="coming-soon">Coming Soon</span>
+                </div>
+                <div class="tool-card">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 6L6 16V32L24 42L42 32V16L24 6Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M24 22L42 12M24 22L6 12M24 22V42" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="24" cy="22" r="4" fill="currentColor"/>
+                    </svg>
+                    <h3>APIs & Services</h3>
+                    <p>Backend utilities and microservices for common tasks.</p>
+                    <span class="coming-soon">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-alt">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 1rem;">Stay Updated</h2>
+            <p style="color: var(--text-light); max-width: 500px; margin: 0 auto 2rem;">New tools are always in the works. Check back often or get in touch to learn about what's coming next.</p>
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 RedBeard51. Built with simplicity in mind.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
