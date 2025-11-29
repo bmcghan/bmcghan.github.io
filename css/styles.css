@@ -11,6 +11,57 @@
     --border-color: #E5E5E5;
 }
 
+/* Dark Mode */
+[data-theme="dark"] {
+    --primary-color: #D4421E;
+    --primary-dark: #8B2500;
+    --accent-color: #FF6B4A;
+    --text-color: #E5E5E5;
+    --text-light: #A0A0A0;
+    --bg-color: #1A1A1A;
+    --bg-white: #242424;
+    --border-color: #3A3A3A;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    transition: color 0.2s ease;
+    margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+    color: var(--primary-color);
+}
+
+.theme-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+.theme-toggle .moon-icon {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+    display: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -26,6 +77,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Navigation */
